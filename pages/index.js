@@ -1,3 +1,5 @@
-export default function Home() {
-  return <div></div>
-}
+import Layout from 'components/Layout'
+
+const Home = () => <Layout>Tu bedzie treść</Layout>
+
+export default Home
