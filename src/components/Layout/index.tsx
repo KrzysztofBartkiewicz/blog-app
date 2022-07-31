@@ -1,7 +1,9 @@
+import Head from 'next/head'
 import Link from 'next/link'
 
 type LayoutProps = {
   children: React.ReactNode
+  title: string
 }
 
 const navLinks = [
@@ -10,24 +12,29 @@ const navLinks = [
   { path: '/projects', label: 'Projects', id: 3 }
 ]
 
-const Layout = ({ children }: LayoutProps) => (
-  <div className="p-10 font-mono">
-    <nav className="bg-blue-400 p-5 flex justify-center">
-      {navLinks.map(({ path, label, id }) => (
-        <Link href={path} key={id}>
-          <a className="shaddow md:w-40 bg-blue-50 p-2 m-2 text-center hover:bg-gray-50 cursor-pointer">
-            {label}
-          </a>
-        </Link>
-      ))}
-    </nav>
+const Layout = ({ children, title }: LayoutProps) => (
+  <>
+    <Head>
+      <title>{title}</title>
+    </Head>
+    <div className="p-10 font-mono">
+      <nav className="bg-blue-400 p-5 flex justify-center">
+        {navLinks.map(({ path, label, id }) => (
+          <Link href={path} key={id}>
+            <a className="shaddow md:w-40 bg-blue-50 p-2 m-2 text-center hover:bg-gray-50 cursor-pointer">
+              {label}
+            </a>
+          </Link>
+        ))}
+      </nav>
 
-    <main className="bg-gray-100 p-5">{children}</main>
+      <main className="bg-gray-100 p-5">{children}</main>
 
-    <footer className="bg-blue-400 p-5 text-gray-100 text-center">
-      &#169; {new Date().getFullYear()}
-    </footer>
-  </div>
+      <footer className="bg-blue-400 p-5 text-gray-100 text-center">
+        &#169; {new Date().getFullYear()}
+      </footer>
+    </div>
+  </>
 )
 
 export default Layout

@@ -1,7 +1,7 @@
 import Layout from '@src/components/Layout'
 
 const Projects = () => {
-  return <Layout>All my projects</Layout>
+  return <Layout title="Projects">All my projects</Layout>
 }
 
 export default Projects
