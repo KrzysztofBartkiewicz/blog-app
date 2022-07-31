@@ -1,4 +1,4 @@
-import Layout from '@src/components/Layout'
+import Layout from '@blog/components/Layout'
 
 const Projects = () => {
   return <Layout title="Projects">All my projects</Layout>

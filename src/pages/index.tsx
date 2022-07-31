@@ -1,4 +1,4 @@
-import Layout from '@src/components/Layout'
+import Layout from '@blog/components/Layout'
 
 const Home = () => <Layout title="Home">Tu bedzie treść</Layout>
 

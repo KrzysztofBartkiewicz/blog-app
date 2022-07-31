@@ -16,7 +16,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "@src/*": ["./src/*"]
+      "@blog/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tailwind.config.js"],
